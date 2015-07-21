@@ -8,15 +8,14 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.2');
+  api.versionsFrom(['METEOR@1.0']);
   
   var packages= [
     'standard-app-packages',
     'service-configuration',
-    'accounts-ui',
     'accounts-base',
+    'accounts-ui',
     'accounts-password',
-    'accounts-twitter',
     'accounts-facebook',
     'reactive-var',
     'email',
@@ -27,14 +26,23 @@ Package.onUse(function(api) {
     'fourseven:scss@2.1.1',
     'iron:router@1.0.9',
     'twbs:bootstrap',
-    'ian:accounts-ui-bootstrap-3'
+    'sacha:spin@0.2.4',
+    'useraccounts:unstyled@1.8.1',
   ];
   
   api.use(packages);
   
   api.imply(packages);
   
-  api.addFiles('bim-lib.js');
+  api.addFiles([
+    'lib/core.js',
+    'lib/utils.js',
+    'lib/config.js'
+  ], ['client', 'server']);
+  
+//  api.addFiles([
+//    'lib/client/template_replacement.js'
+//  ], ['client']);
   
   api.export('BiM');
 });
