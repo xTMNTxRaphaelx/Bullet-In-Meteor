@@ -1,3 +1,4 @@
+/* global SinglePostController */
 /* global Router */
 Router.configure({
   loadingTemplate: 'spinner',
@@ -6,15 +7,15 @@ Router.configure({
 
 Router.route('/', {
   name: 'root',
-  controller: 'MainPageController'
+  controller: MainPageController
 });
 
 Router.route('/new', {
   name: 'newPost',
-  controller: 'NewPostController'
+  controller: NewPostController
 });
 
 Router.route('/:_id', {
   name: 'singlePost',
-  controller: 'SinglePostController'
+  controller: SinglePostController
 });
