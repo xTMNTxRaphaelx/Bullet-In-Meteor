@@ -1,3 +1,5 @@
+/* global Posts */
+/* global Meteor */
 Meteor.publish('allPosts', function(){
   return Posts.find();
 });
