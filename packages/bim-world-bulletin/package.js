@@ -11,14 +11,28 @@ Package.onUse(function(api) {
   api.versionsFrom("METEOR@1.0");
 
   var packages = [
-    'rahulgarg:bim-lib' //no dependencies
+    'rahulgarg:bim-lib', //no dependencies
+    'rahulgarg:bim-bulletins'
   ];
   
   api.use(packages);
 
   api.imply(packages);
   
-  api.addFiles('bim-world-bulletin.js');
+  api.addFiles([
+    'lib/controller.js'
+  ], ['client', 'server']);
+  
+  api.addFiles([
+    'server/publications.js'
+  ], 'server');
+  
+  api.addFiles([
+    'client/templates/world_bulletin.html',
+    'client/templates/post_item.html'
+  ], 'client');
+  
+  api.export('WorldBulletinController');
 });
 
 Package.onTest(function(api) {

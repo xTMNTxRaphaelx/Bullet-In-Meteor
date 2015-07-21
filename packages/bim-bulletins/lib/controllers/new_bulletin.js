@@ -1,5 +1,10 @@
-NewPostController = BaseController.extend({
-  template: 'newPost',
+/* global Meteor */
+/* global RouteController */
+/* global NewBulletinController */
+NewBulletinController = RouteController.extend({
+  template: 'newBulletin',
+  
+  layoutTemplate: 'mainLayout',
 
   onBeforeAction: function() {
     if (!Meteor.user()) {

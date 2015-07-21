@@ -1,3 +1,6 @@
+/* global WorldBulletinController */
+/* global NewPostController */
+
 /* global SinglePostController */
 /* global Router */
 Router.configure({
@@ -7,15 +10,15 @@ Router.configure({
 
 Router.route('/', {
   name: 'root',
-  controller: MainPageController
+  controller: WorldBulletinController
 });
 
 Router.route('/new', {
   name: 'newPost',
-  controller: NewPostController
+  controller: NewBulletinController
 });
 
 Router.route('/:_id', {
   name: 'singlePost',
-  controller: SinglePostController
+  controller: SingleBulletinController
 });

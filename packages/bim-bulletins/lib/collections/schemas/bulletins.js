@@ -1,11 +1,13 @@
-var postFields = {
+/* global SimpleSchema */
+/* global BulletinSchema */
+var bulletinFields = {
   title: {
     type: String,
     label: 'Title'
   },
   body: {
     type: String,
-    label: 'Body',
+    label: 'Description',
     autoform: {
       type: 'textarea',
       rows: 5
@@ -41,4 +43,4 @@ var postFields = {
   }
 };
 
-PostSchema = new SimpleSchema(postFields);
+BulletinSchema = new SimpleSchema(bulletinFields);

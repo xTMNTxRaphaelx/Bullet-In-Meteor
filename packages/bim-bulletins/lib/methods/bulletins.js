@@ -1,8 +1,5 @@
-/* global Posts */
-/* global _ */
-/* global Meteor */
 Meteor.methods({
-  submitPost: function (post) {
+  submitBulletin: function (bulletin) {
 
     var user = Meteor.user();
     if (!user) {
@@ -12,11 +9,12 @@ Meteor.methods({
     var additionalParams = {
       author: 'Author',
       createdAt: new Date(),
-      userId: user._id }
+      userId: user._id 
+	 };
 
-    _.extend(post, additionalParams);
-    post._id = Posts.insert(post);
+    _.extend(bulletin, additionalParams);
+    bulletin._id = Bulletins.insert(bulletin);
 
-    return post;
+    return bulletin;
   }
 });
