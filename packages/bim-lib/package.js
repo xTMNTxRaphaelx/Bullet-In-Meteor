@@ -27,7 +27,8 @@ Package.onUse(function(api) {
     'iron:router@1.0.9',
     'twbs:bootstrap',
     'sacha:spin@0.2.4',
-    'useraccounts:unstyled@1.8.1',
+    'useraccounts:unstyled@1.8.1'
+//    'fezvrasta:bootstrap-material-design'
   ];
   
   api.use(packages);
