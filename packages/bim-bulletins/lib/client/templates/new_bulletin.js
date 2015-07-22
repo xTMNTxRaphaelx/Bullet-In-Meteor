@@ -1,9 +1,11 @@
+/* global Mediator */
 /* global Router */
 /* global AutoForm */
 AutoForm.hooks({
   submitPostForm: {
-    onSuccess: function(operation, post) {
-      Router.go('singlePost', post);
+    onSuccess: function(operation, bulletin) {
+      Mediator.publish('addTags', bulletin);
+      Router.go('singlePost', bulletin);
     }
   }
 });

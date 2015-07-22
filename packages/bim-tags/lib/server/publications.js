@@ -5,3 +5,4 @@ Meteor.publish('allTags', function() {
 Meteor.publish('bulletinTags', function(bulletinId) {
 	return Tags.find({'bulletinId': bulletinId});
 });
+

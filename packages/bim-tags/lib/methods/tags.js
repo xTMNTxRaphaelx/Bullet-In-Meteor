@@ -1,22 +1,24 @@
 /* global Tags */
 /* global _ */
 Meteor.methods({
-	addTags: function(tags, bulletinId) {
+	addTags: function(bulletinObject) {
 		var user= Meteor.user();
 		if(!user) {
 			throw new Meteor.Error(401, 'You need to log in first');
 		}
-		
 		var additionalParameters= {
 			createdAt: new Date(),
       		userId: user._id,
-			bulletinId: bulletinId
+			bulletinId: bulletinObject._id
 		};
 		
-		_.each(tags, function(tag) {
-			_.extend(tag, additionalParameters);
-			
-			tag._id= Tags.insert(tag);
+		var tags= [];
+		_.each(bulletinObject.tags, function(tag, i) {
+			var tagObject= {};
+			tagObject.name= tag;
+			_.extend(tagObject, additionalParameters);
+			tag._id = Tags.insert(tagObject);
+			tags.push(tag);
 		});
 		
 		return tags;

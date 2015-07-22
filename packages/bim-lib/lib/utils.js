@@ -9,7 +9,7 @@ BiM.utils = {};
 
 // Mediator Package for Communication from Package(manuel-schoebel.com/blog/mediator-pattern)
 //The Mediator has two functions, one to subscribe to a channel and one to publish to a channel. 
-var Mediator;
+//var Mediator;
 
 Mediator = {
   channels: {},
@@ -25,6 +25,6 @@ Mediator = {
       };
     }
     this.channels[name].deps.depend();
-    this.channels[name].args;
+    return this.channels[name].args;
   }
 };
