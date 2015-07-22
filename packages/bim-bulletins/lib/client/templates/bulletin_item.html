@@ -1,7 +1,10 @@
 <template name="bulletin">
-  <h3>
-    {{#linkTo route='singlePost'}}
-      {{title}}
-    {{/linkTo}}
-  </h3>
+  <div class="panel panel-default col-sm-3">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{#linkTo route='singlePost'}}{{title}}{{/linkTo}}</h3>
+    </div>
+    <div class="panel-body">
+      {{#markdown}}{{body}}{{/markdown}}
+    </div>
+  </div>
 </template>

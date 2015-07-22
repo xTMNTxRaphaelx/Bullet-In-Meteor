@@ -9,8 +9,22 @@ var bulletinFields = {
     type: String,
     label: 'Description',
     autoform: {
-      type: 'textarea',
-      rows: 5
+      afFieldInput: {
+        type: 'summernote',
+        class: 'editor',
+        settings: {
+          toolbar: [
+            //[groupname, [button list]]
+             
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['font', ['strikethrough', 'superscript', 'subscript']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['height', ['height']],
+          ]
+        }
+      }
     }
   },
   _id: {

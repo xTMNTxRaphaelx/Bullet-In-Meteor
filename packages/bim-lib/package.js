@@ -12,23 +12,23 @@ Package.onUse(function(api) {
   
   var packages= [
     'standard-app-packages',
-    'service-configuration',
+    'markdown',
     'accounts-base',
     'accounts-ui',
     'accounts-password',
     'accounts-facebook',
     'reactive-var',
     'email',
-    'aldeed:simple-schema@1.3.3',
-    'aldeed:collection2@2.3.3',
-    'sacha:autoform@5.1.2',
-    'aldeed:template-extension@3.4.3',
-    'fourseven:scss@2.1.1',
-    'iron:router@1.0.9',
+    'iron:router',
     'twbs:bootstrap',
-    'sacha:spin@0.2.4',
-    'useraccounts:unstyled@1.8.1'
-//    'fezvrasta:bootstrap-material-design'
+    'fortawesome:fontawesome',
+    'aldeed:simple-schema',
+    'aldeed:collection2',
+    'aldeed:autoform',
+    'yogiben:autoform-modals',
+    'aldeed:template-extension',
+    'sacha:spin',
+    'mpowaga:autoform-summernote'
   ];
   
   api.use(packages);
@@ -37,8 +37,8 @@ Package.onUse(function(api) {
   
   api.addFiles([
     'lib/core.js',
-    'lib/utils.js',
-    'lib/config.js'
+    'lib/config.js',
+    'lib/utils.js'
   ], ['client', 'server']);
     
   api.export('BiM');

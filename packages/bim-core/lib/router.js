@@ -1,9 +1,9 @@
 /* global WorldBulletinController */
-/* global NewPostController */
-
-/* global SinglePostController */
+/* global NewBulletinController */
+/* global SingleBulletinController */
 /* global Router */
 Router.configure({
+  layoutTemplate: 'mainLayout',
   loadingTemplate: 'spinner',
   notFoundTemplate: 'notFound'
 });

@@ -26,7 +26,10 @@ Package.onUse(function (api) {
   ], ['client', 'server']);
 
   api.addFiles([
+//    'lib/client/stylesheets/lib/bootstrap-paper.css',
+    'lib/client/stylesheets/style.css',
     'lib/client/shared/layouts/main_layout.html',
+    'lib/client/main_layout.js',
     'lib/client/shared/access_denied.html',
     'lib/client/shared/main.html',
     'lib/client/shared/not_found.html',
