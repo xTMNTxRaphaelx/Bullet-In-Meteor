@@ -28,7 +28,8 @@ Package.onUse(function(api) {
     'yogiben:autoform-modals',
     'aldeed:template-extension',
     'sacha:spin',
-    'mpowaga:autoform-summernote'
+    'mpowaga:autoform-summernote',
+    'yogiben:autoform-tags'
   ];
   
   api.use(packages);
@@ -41,5 +42,5 @@ Package.onUse(function(api) {
     'lib/utils.js'
   ], ['client', 'server']);
     
-  api.export('BiM');
+  api.export(['BiM', 'Mediator']);
 });

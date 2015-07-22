@@ -7,13 +7,15 @@ Meteor.methods({
     }
 
     var additionalParams = {
-      author: 'Author',
+      author: user.username,
       createdAt: new Date(),
       userId: user._id 
 	 };
 
     _.extend(bulletin, additionalParams);
     bulletin._id = Bulletins.insert(bulletin);
+    
+    
 
     return bulletin;
   }

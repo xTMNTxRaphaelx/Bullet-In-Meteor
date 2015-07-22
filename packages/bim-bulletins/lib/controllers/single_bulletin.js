@@ -2,8 +2,6 @@
 SingleBulletinController = RouteController.extend({
   template: 'bulletinPage',
   
-  layoutTemplate: 'mainLayout',
-
   waitOn: function(){
     return Meteor.subscribe('singleBulletin', this.params._id);
   },

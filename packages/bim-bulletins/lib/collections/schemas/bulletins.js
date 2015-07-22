@@ -48,6 +48,14 @@ var bulletinFields = {
       omit: true
     }
   },
+  tags: {
+    type: [String],
+    optional: true,
+    autoform: {
+      type: 'tags',
+      afFieldInput: 'bootstrap-tags-input'
+    }
+  },
   createdAt: {
     type: Date,
     optional: true,

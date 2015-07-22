@@ -4,8 +4,6 @@
 NewBulletinController = RouteController.extend({
   template: 'newBulletin',
   
-  layoutTemplate: 'mainLayout',
-
   onBeforeAction: function() {
     if (!Meteor.user()) {
       if (Meteor.loggingIn()) {
