@@ -1,7 +1,6 @@
 Package.describe({
   name: 'rahulgarg:bim-bulletins',
   version: '0.0.1',
-  // Brief, one-line summary of the package.
   summary: 'Bulletins package for application',
   git: 'https://github.com/xTMNTxRaphaelx/Bullet-In-Meteor.git',
   documentation: 'README.md'
@@ -27,20 +26,15 @@ Package.onUse(function(api) {
   ], ['client', 'server']);
   
   api.addFiles([
-    'server/publications.js'
+    'lib/server/publications.js'
   ], 'server');
   
   api.addFiles([
-    'client/templates/bulletin_page.html',
-    'client/templates/new_bulletin.html',
-    'client/templates/new_bulletin.js'
+    'lib/client/templates/bulletin_page.html',
+    'lib/client/templates/new_bulletin.html',
+    'lib/client/templates/bulletin_item.html',
+    'lib/client/templates/new_bulletin.js'
   ], 'client');
   
   api.export(['Bulletins', 'NewBulletinController', 'SingleBulletinController'])
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('rahulgarg:bim-bulletins');
-  api.addFiles('bim-bulletins-tests.js');
 });

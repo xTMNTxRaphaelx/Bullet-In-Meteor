@@ -22,26 +22,10 @@ Package.onUse(function (api) {
 
 
   api.addFiles([
-//    'lib/shared/collections/schemas/posts.js',
-//    'lib/shared/collections/posts.js',
-//    'lib/shared/controllers/base.js',
-//    'lib/shared/controllers/main_page.js',
-//    'lib/shared/controllers/new_post.js',
-//    'lib/shared/controllers/signle_post.js',
-//    'lib/shared/methods/posts.js',
-    'lib/shared/router.js'
+    'lib/router.js'
   ], ['client', 'server']);
 
   api.addFiles([
-//    'lib/server/publications.js'
-  ], 'server');
-
-  api.addFiles([
-//    'lib/client/posts/templates/new_post.html',
-//    'lib/client/posts/templates/new_post.js',
-//    'lib/client/posts/templates/post_item.html',
-//    'lib/client/posts/templates/post_page.html',
-//    'lib/client/posts/templates/posts_list.html',
     'lib/client/shared/layouts/main_layout.html',
     'lib/client/shared/access_denied.html',
     'lib/client/shared/main.html',
@@ -50,10 +34,4 @@ Package.onUse(function (api) {
 
   api.export('Posts');
 
-});
-
-Package.onTest(function (api) {
-  api.use('tinytest');
-  api.use('rahulgarg:bim-core');
-  api.addFiles('bim-core-tests.js');
 });

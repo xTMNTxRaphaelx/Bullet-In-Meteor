@@ -39,16 +39,6 @@ Package.onUse(function(api) {
     'lib/utils.js',
     'lib/config.js'
   ], ['client', 'server']);
-  
-//  api.addFiles([
-//    'lib/client/template_replacement.js'
-//  ], ['client']);
-  
+    
   api.export('BiM');
 });
-//
-//Package.onTest(function(api) {
-//  api.use('tinytest');
-//  api.use('rahulgarg:bim-lib');
-//  api.addFiles('bim-lib-tests.js');
-//});

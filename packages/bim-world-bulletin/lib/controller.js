@@ -1,6 +1,7 @@
-/* global Posts */
+/* global Meteor */
+/* global Bulletins */
+/* global BiM */
 /* global RouteController */
-/* global WorldBulletinController */
 WorldBulletinController = RouteController.extend({
 	template: 'worldBulletin',
 	
@@ -11,9 +12,9 @@ WorldBulletinController = RouteController.extend({
 	},
 
 	waitOn: function () {
-		return Meteor.subscribe('allPosts', this.findOptions());
+		return Meteor.subscribe('allBulletins', this.findOptions());
 	},
 	data: function () {
-		return { posts: Bulletins.find({}, this.findOptions()) };
+		return { bulletins: Bulletins.find({}, this.findOptions()) };
 	}
 });

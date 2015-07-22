@@ -23,20 +23,10 @@ Package.onUse(function(api) {
     'lib/controller.js'
   ], ['client', 'server']);
   
-  api.addFiles([
-    'server/publications.js'
-  ], 'server');
   
   api.addFiles([
-    'client/templates/world_bulletin.html',
-    'client/templates/post_item.html'
+    'lib/client/templates.html'
   ], 'client');
   
   api.export('WorldBulletinController');
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('rahulgarg:bim-world-bulletin');
-  api.addFiles('bim-world-bulletin-tests.js');
 });
