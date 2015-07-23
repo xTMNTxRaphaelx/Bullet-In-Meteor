@@ -1,3 +1,5 @@
+/* global Template */
+/* global Tags */
 Template.bulletin.helpers({
 	returnStartingFewString: function(sentence) {
 		if(sentence.length > 100) {
