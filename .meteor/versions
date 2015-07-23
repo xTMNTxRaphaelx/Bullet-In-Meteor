@@ -89,7 +89,6 @@ sacha:spin@0.2.4
 service-configuration@1.0.4
 session@1.1.0
 sha@1.0.3
-sjors:meteor-masonry@0.0.1
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 srp@1.0.3
@@ -102,6 +101,7 @@ ui@1.0.6
 underscore@1.0.3
 url@1.0.4
 utilities:avatar@0.7.15
+voodoohop:masonrify@0.0.3
 webapp@1.2.0
 webapp-hashing@1.0.3
 yogiben:autoform-modals@0.2.7

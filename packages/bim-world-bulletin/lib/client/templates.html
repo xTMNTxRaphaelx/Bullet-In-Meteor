@@ -18,11 +18,15 @@
     
     <div class="bulletinsContent row">
       <div class="col-sm-12 grid">
-        <div class="row">
-          <div class="grid-sizer"></div>
+        <div class="row masonry-grid">
+          
+          {{#masonryContainer itemSelector=".grid-item" columnWidth=".grid-item" percentPosition=true transitionDuration="0.1s" gutter=0 id="MasonryContainer"}}
             {{#each bulletins}}
-              {{> bulletin}}
-            {{/each}}  
+              {{#masonryElement "MasonryContainer"}}
+                {{> bulletin}}  
+              {{/masonryElement}}
+            {{/each}}
+          {{/masonryContainer}}
         </div>
       </div>
       
