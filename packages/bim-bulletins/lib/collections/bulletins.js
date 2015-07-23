@@ -3,3 +3,9 @@
 /* global Bulletins */
 Bulletins = new Mongo.Collection('bulletins');
 Bulletins.attachSchema(BulletinSchema);
+
+Bulletins.allow({
+	insert: function(userId, doc) {
+		return true;
+	}
+});

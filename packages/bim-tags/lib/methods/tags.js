@@ -12,15 +12,12 @@ Meteor.methods({
 			bulletinId: bulletinObject._id
 		};
 		
-		var tags= [];
 		_.each(bulletinObject.tags, function(tag, i) {
 			var tagObject= {};
 			tagObject.name= tag;
 			_.extend(tagObject, additionalParameters);
-			tag._id = Tags.insert(tagObject);
-			tags.push(tag);
+			var tag= Tags.insert(tagObject);
+			console.log(tag);
 		});
-		
-		return tags;
 	}
 });

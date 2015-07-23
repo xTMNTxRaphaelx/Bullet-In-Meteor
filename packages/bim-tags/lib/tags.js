@@ -1,3 +1,4 @@
+/* global Mediator */
 /* global TagsSchema */
 /* global Mongo */
 /* global Tags */
@@ -5,6 +6,12 @@
 /* global Deps */
 Tags= new Mongo.Collection("tags");
 Tags.attachSchema(TagsSchema);
+
+Tags.allow({
+	insert: function(userId, doc) {
+		return true;
+	}
+});
 
 
 Meteor.startup(function() {
@@ -15,10 +22,4 @@ Meteor.startup(function() {
 			Meteor.call('addTags', args[1]);
 		}
 	});
-});
-
-Tags.allow({
-	insert: function(userId, doc) {
-		return true;
-	}
 });

@@ -28,6 +28,11 @@ Package.onUse(function (api) {
   api.addFiles([
     'lib/server/publications.js'
   ], 'server');
+  
+  api.addFiles([
+    'lib/client/template.html',
+    'lib/client/template.js'
+  ], 'client');
 
   api.export('Tags');
 });

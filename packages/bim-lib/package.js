@@ -29,7 +29,18 @@ Package.onUse(function(api) {
     'aldeed:template-extension',
     'sacha:spin',
     'mpowaga:autoform-summernote',
-    'yogiben:autoform-tags'
+    'yogiben:autoform-tags',
+    'ostrio:iron-router-title',
+    'momentjs:moment',
+    'matb33:collection-hooks',
+    'hitchcott:paginator',
+    'dburles:collection-helpers',
+    'fastclick',
+    'meteorhacks:fast-render',
+//    'okgrow:iron-router-autoscroll',
+    'matteodem:easy-search',
+    'arkham:comments-ui',
+    'isotope:isotope'
   ];
   
   api.use(packages);

@@ -7,7 +7,7 @@ Meteor.methods({
     }
 
     var additionalParams = {
-      author: user.username,
+      author: 'Author',
       createdAt: new Date(),
       userId: user._id 
 	 };

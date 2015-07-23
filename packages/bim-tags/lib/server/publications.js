@@ -1,5 +1,5 @@
 Meteor.publish('allTags', function() {
-	return Tags.find();
+	return Tags.find({});
 });
 
 Meteor.publish('bulletinTags', function(bulletinId) {

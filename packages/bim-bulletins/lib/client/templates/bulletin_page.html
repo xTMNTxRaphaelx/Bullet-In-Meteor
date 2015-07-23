@@ -1,5 +1,5 @@
 <template name="bulletinPage">
   <h2>{{title}}</h2>
-  <p>{{body}}</p>
+  <p>{{#markdown}}{{body}}{{/markdown}}</p>
   <p>by {{author}}</p>
 </template>

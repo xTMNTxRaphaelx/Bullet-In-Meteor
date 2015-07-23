@@ -1,16 +1,26 @@
 <template name="worldBulletin">
-  
-  <div class="well">
-    <button class="btn btn-primary">Social Networking<span class="badge">12</span></button>
-    <button class="btn btn-primary">Dota 2<span class="badge">4</span></button>
-    <button class="btn btn-primary">One Piece<span class="badge">6</span></button>
-    <button class="btn btn-primary">Mortal Kombat<span class="badge">4</span></button>
-    <button class="btn btn-primary">Nihongo<span class="badge">4</span></button>
-    <button class="btn btn-primary">Anime<span class="badge">4</span></button>
-    <button class="btn btn-primary">Sphongle<span class="badge">4</span></button>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="well">
+        {{#each tags}}
+          {{> tag}}  
+        {{/each}}
+      </div>    
+    </div>
+    <div class="col-sm-3">
+      Sort by: <select name="" id="">
+        <option value="">Latest</option>
+      </select>
+    </div>
   </div>
   
-  {{#each bulletins}}
-    {{> bulletin}}
-  {{/each}}
+  <div class="row">
+    {{#each bulletins}}
+      {{> bulletin}}
+    {{/each}}
+    
+    <div class="js-loadMore well text-center">
+      <button class="btn">+ Load More (fallback)</button>
+    </div>  
+  </div>
 </template>
