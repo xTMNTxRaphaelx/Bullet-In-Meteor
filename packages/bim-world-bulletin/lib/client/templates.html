@@ -1,26 +1,34 @@
 <template name="worldBulletin">
-  <div class="row">
-    <div class="col-sm-9">
-      <div class="well">
-        {{#each tags}}
-          {{> tag}}  
-        {{/each}}
-      </div>    
+  <div class="worldBulletinContent">
+    <div class="row" style="display:none;">
+      <div class="col-sm-9">
+        <div class="well tags-cloud ">
+          <h3>Tag Cloud</h3>
+          {{#each tags}}
+            {{> tag}}  
+          {{/each}}
+        </div>    
+      </div>
+      <div class="col-sm-3">
+        Sort by: <select name="" id="">
+          <option value="">Latest</option>
+        </select>
+      </div>
     </div>
-    <div class="col-sm-3">
-      Sort by: <select name="" id="">
-        <option value="">Latest</option>
-      </select>
-    </div>
-  </div>
-  
-  <div class="row">
-    {{#each bulletins}}
-      {{> bulletin}}
-    {{/each}}
     
-    <div class="js-loadMore well text-center">
-      <button class="btn">+ Load More (fallback)</button>
+    <div class="bulletinsContent row">
+      <div class="col-sm-12 grid">
+        <div class="row">
+          <div class="grid-sizer"></div>
+            {{#each bulletins}}
+              {{> bulletin}}
+            {{/each}}  
+        </div>
+      </div>
+      
+      <div class="js-loadMore text-center col-sm-12">
+        <button class="btn">+ Load More (fallback)</button>
+      </div>  
     </div>  
   </div>
 </template>

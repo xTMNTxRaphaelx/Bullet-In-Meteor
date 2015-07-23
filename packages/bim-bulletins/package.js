@@ -33,6 +33,7 @@ Package.onUse(function(api) {
     'lib/client/templates/bulletin_page.html',
     'lib/client/templates/new_bulletin.html',
     'lib/client/templates/bulletin_item.html',
+    'lib/client/templates/bulletin_item.js',
     'lib/client/templates/new_bulletin.js'
   ], 'client');
   

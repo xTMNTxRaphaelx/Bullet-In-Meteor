@@ -1,10 +1,14 @@
 <template name="bulletin">
-  <div class="panel panel-default col-sm-3">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{#linkTo route='singlePost'}}{{title}}{{/linkTo}}</h3>
-    </div>
-    <div class="panel-body">
-      {{#markdown}}{{body}}{{/markdown}}
+  <div class="col-sm-4 grid-item bulletinContainer no-gutter">
+    <div class="bulletin">
+      <div class="bulletin-heading">
+        <h4 class="bulletin-title">{{#linkTo route='singlePost'}}{{title}}{{/linkTo}}</h4>
+      </div>
+      <div class="bulletin-body">
+        {{#markdown}}{{body}}{{/markdown}}
+        
+      </div>
+      <p><b>Tags: </b>{{tags}}</p>
     </div>
   </div>
 </template>

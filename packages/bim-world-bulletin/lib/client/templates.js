@@ -5,17 +5,22 @@
 Template.worldBulletin.events({
   'click .js-loadMore button': function () {
     loadMore({ force: true });
+    
   }
 });
 
 Template.worldBulletin.hooks({
   created: function () {
-    $('.main_content').isotope({
-      itemSelector: '.panel',
-      masonry: {
-        columnWidth: 200
-      }
-    });
+//    $('.grid').masonry({
+//      columnWidth: 200,
+//      itemSelector: '.grid-item'
+//    });
+//    $('.bulletinsContent').isotope({
+//      itemSelector: '.bulletin',
+//      masonry: {
+//        columnWidth: 80
+//      }
+//    });
   }
 });
 

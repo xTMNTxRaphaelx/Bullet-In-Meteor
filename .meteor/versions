@@ -41,7 +41,6 @@ iron:location@1.0.9
 iron:middleware-stack@1.0.9
 iron:router@1.0.9
 iron:url@1.0.9
-isotope:isotope@2.1.0_1
 jparker:crypto-core@0.1.0
 jparker:crypto-md5@0.1.1
 jparker:gravatar@0.3.1
@@ -90,6 +89,7 @@ sacha:spin@0.2.4
 service-configuration@1.0.4
 session@1.1.0
 sha@1.0.3
+sjors:meteor-masonry@0.0.1
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 srp@1.0.3

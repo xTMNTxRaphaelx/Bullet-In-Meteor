@@ -1,0 +1,60 @@
+<template name="mainLayout">
+<!--Begin Header-->
+  <header>
+<!--Begin Top Bar-->
+    <div class="top-bar">
+      <div class="container container-header">
+        <div class="row top-bar-row">
+          <div class="col-sm-7 hidden-xs contact-info">
+            <span class="loveText">Built with <a href="https://www.meteor.com/">Meteor</a>, and <a href=""><i class="fa fa-heart fake-link"></i></a>.</span>
+            <span class="githubLinkText"><a href="https://github.com/xTMNTxRaphaelx/Bullet-In-Meteor"><i class="fa fa-github"></i>Github Link</a></span>
+          </div>
+          <div class="col-sm-5 text-right topmenu-holder">
+            <ul class="topbar-list list-inline">
+              <li>
+                {{> loginButtons}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          {{#linkTo route='root' class='navbar-brand brand'}}
+            Bullet-In Meteor
+          {{/linkTo}}
+        </div>
+        {{> autoformModals}}
+        <ul class="nav navbar-nav navbar-right">
+          <li class="{{ activeIfTemplateIs 'worldBulletin'}}">
+            {{#linkTo route='root'}}
+              World Bulletin
+            {{/linkTo}}
+          </li>
+          <li class="{{ activeIfTemplateIs 'newBulletin'}}">
+            {{#linkTo route='newPost'}}
+              Add a Bulletin
+            {{/linkTo}}
+          </li>
+          <li>
+            {{#afModal class="btn btn-xs" collection="Bulletins" operation="insert"}}
+              Add a new post
+            {{/afModal}}
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          {{> yield}}
+        
+      </div>
+    </div>
+  </div>
+</template>
