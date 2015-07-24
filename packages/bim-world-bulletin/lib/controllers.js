@@ -14,6 +14,8 @@ WorldBulletinController = RouteController.extend({
 		return [Meteor.subscribe('allBulletins', this.findOptions()), Meteor.subscribe('allTags', this.findOptions())];
 	},
 	data: function () {
-		return { bulletins: Bulletins.find({}, this.findOptions()), tags: Tags.find({}, this.findOptions()) };
+		var query= Session.get('query');
+		var bulletinQuery= query.filterTitle ? {tags: query.filterTitle} : {};
+		return { bulletins: Bulletins.find(bulletinQuery, this.findOptions()), tags: Tags.find({}, this.findOptions()) };
 	}
 });

@@ -1,9 +1,11 @@
 /* global Bulletins */
 /* global Meteor */
 Meteor.publish('allBulletins', function(opts){
+  console.log('are you publishing?');
   var opts= opts || {};
   var page= opts.page || 1;
-  var res= Bulletins.find({},{limit: page * 10});
+  var value= opts.filterTitle || {};
+  var res= Bulletins.find(value,{limit: page * 10});
   return res;
 });
 
