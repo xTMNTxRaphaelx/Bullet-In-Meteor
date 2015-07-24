@@ -1,6 +1,5 @@
 Meteor.methods({
   submitBulletin: function (bulletin) {
-
     var user = Meteor.user();
     if (!user) {
       throw new Meteor.Error(401, 'You need to log in first');
@@ -14,8 +13,6 @@ Meteor.methods({
 
     _.extend(bulletin, additionalParams);
     bulletin._id = Bulletins.insert(bulletin);
-    
-    
 
     return bulletin;
   }

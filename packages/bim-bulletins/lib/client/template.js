@@ -1,5 +1,3 @@
-/* global Template */
-/* global Tags */
 Template.bulletin.helpers({
 	returnStartingFewString: function(sentence) {
 		if(sentence.length > 100) {
@@ -26,4 +24,14 @@ Template.bulletin.events({
 		event.preventDefault();
 		$(event.currentTarget).siblings('a.btn-danger').trigger('click');	
 	}
+});
+
+AutoForm.hooks({
+  submitPostForm: {
+    onSuccess: function(operation, bulletin) {
+//      console.log('hali');
+//      Mediator.publish('addTags', bulletin.tags, bulletin._id); 
+//      Router.go('singlePost', bulletin);
+    }
+  }
 });
