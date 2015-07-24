@@ -41,9 +41,18 @@ Meteor.methods({
 	tag_clicked: function(tagName) {
 		Meteor.call('updateSessionQuery', tagName);
 	},
-	updateSessionQuery: function(name) {
+	updateSessionQuery: function(tagsSelected) {
     if(Meteor.isClient) {
-      Session.set('query', {filterTitle: name, page: 1});  
+      if(tagsSelected.length> 1) {
+        var arr= [];
+        _.each(tagsSelected, function(tag, i) {
+          arr.push({tags: tag});
+        });
+        var obj= {$or: arr};
+        Session.set('query', {filterTitle: obj, page: 1});  
+      } else {
+        Session.set('query', {filterTitle: {tags: name}, page: 1});  
+      }
     }
 	}
 });
