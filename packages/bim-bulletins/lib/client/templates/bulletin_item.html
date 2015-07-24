@@ -1,6 +1,6 @@
 <template name="bulletin">
   <div class="col-sm-4 grid-item bulletinContainer">
-    <div class="bulletin">
+    <div class="bulletin" style="background-color:{{bulletinColor}}">
       <div class="bulletin-heading">
         <h4 class="bulletin-title">{{#linkTo route='singlePost'}}{{title}}{{/linkTo}}</h4>
         {{#afModal class='btn btn-primary' collection='Bulletins' operation='update' doc=_id}} Update {{/afModal}}

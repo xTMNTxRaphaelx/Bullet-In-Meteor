@@ -10,6 +10,10 @@ Template.bulletin.helpers({
 	},
 	bulletinTags: function(tag) {
 		return Tags.find({});
+	},
+	bulletinColor: function() {
+		var colors= ['lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgreen', 'lightpink'];
+		return colors[Math.floor(Math.random()*colors.length)];
 	}
 });
 
