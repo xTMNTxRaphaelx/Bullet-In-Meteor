@@ -8,8 +8,17 @@ Meteor.startup(function() {
 		var args;
 		args= Mediator.subscribe("addTags");
 		if(args) {
-			console.log(args);
 			Meteor.call('addTags', args[1], args[2]);
+		}
+	});
+});
+
+Meteor.startup(function() {
+	return Deps.autorun(function() {
+		var args;
+		args= Mediator.subscribe("update_tags");
+		if(args) {
+			Meteor.call('update_tags', args[1], args[2]);
 		}
 	});
 });
@@ -50,5 +59,9 @@ Meteor.methods({
 	},
 	updateTagCount: function(tagObj) {
 		Tags.update(tagObj._id, {$inc: {count: 5}});
+	},
+	update_tags: function(previousTagsArray, newTagsArray) {
+		console.log('haii');
+		console.log(previousTagsArray, newTagsArray);
 	}
 });

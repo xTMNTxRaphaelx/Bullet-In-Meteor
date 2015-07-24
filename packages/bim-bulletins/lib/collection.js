@@ -17,7 +17,12 @@ var bulletinFields = {
 		}
 	}
   },
-  tags: { type: [String], optional: true, autoform: { type: 'tags', afFieldInput: 'bootstrap-tags-input' } },
+  tags: { type: [String], optional: true, 
+  	autoform: { 
+	  type: 'tags',
+	  afFieldInput: 'bootstrap-tagsinput'
+	 } 
+  },
   createdAt: { type: Date, optional: true, autoform: { omit: true }, 
 	autoValue: function() {
 		if(this.isInsert) {
@@ -56,4 +61,12 @@ Bulletins.allow({
 
 Bulletins.after.insert(function(userId, bulletin) {
 	Mediator.publish('addTags', bulletin.tags, bulletin._id);
+	Tracker.nonreactive(function() {
+		Bulletins.update(bulletin._id, {$set: {userId: userId}});	
+	});
+});
+
+Bulletins.after.update(function(userId, bulletin, fieldNames, modifier, options) {
+	//Call to update tags
+	Mediator.publish('update_tags', this.previous.tags, bulletin.tags);
 });

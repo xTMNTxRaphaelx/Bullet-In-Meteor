@@ -45,5 +45,18 @@ Template.worldBulletin.rendered= function() {
         return $(node).remove();
       });
     }
-  }
-}
+  };
+};
+
+Template.worldBulletin.rendered = function() {
+  return $('#afModal').on('hidden.bs.modal', function() {
+    var i, key, len, results, sessionKeys;
+    sessionKeys = ['cmCollection', 'cmOperation', 'cmDoc', 'cmButtonHtml', 'cmFields', 'cmOmitFields', 'cmButtonContent', 'cmTitle', 'cmButtonClasses', 'cmPrompt'];
+    results = [];
+    for (i = 0, len = sessionKeys.length; i < len; i++) {
+      key = sessionKeys[i];
+      results.push(delete Session.keys[key]);
+    }
+    return results;
+  });
+};

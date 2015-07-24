@@ -16,7 +16,6 @@ WorldBulletinController = RouteController.extend({
 	data: function () {
 		var query= Session.get('query');
 		var bulletinQuery= query.filterTitle ? query.filterTitle : {};
-		console.log(bulletinQuery);
 		return { bulletins: Bulletins.find(bulletinQuery, this.findOptions()), tags: Tags.find({}, this.findOptions()) };
 	}
 });

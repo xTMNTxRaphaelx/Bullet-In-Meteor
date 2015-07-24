@@ -1,3 +1,7 @@
+/* global AutoForm */
+/* global Template */
+/* global moment */
+/* global $ */
 Template.bulletin.helpers({
 	returnStartingFewString: function(sentence) {
 		if(sentence.length > 100) {
@@ -18,7 +22,6 @@ Template.bulletin.helpers({
 	},
 	isCreator: function() {
 		var user= Meteor.user();
-		console.log(this);
 		if(!user) {
 			return false;
 		} else {
@@ -38,12 +41,12 @@ Template.bulletin.events({
 	}
 });
 
-AutoForm.hooks({
-  submitPostForm: {
-    onSuccess: function(operation, bulletin) {
-//      console.log('hali');
-//      Mediator.publish('addTags', bulletin.tags, bulletin._id); 
-//      Router.go('singlePost', bulletin);
-    }
-  }
-});
+//AutoForm.hooks({
+//  submitPostForm: {
+//    onSuccess: function(operation, bulletin) {
+////      console.log('hali');
+////      Mediator.publish('addTags', bulletin.tags, bulletin._id); 
+////      Router.go('singlePost', bulletin);
+//    }
+//  }
+//});

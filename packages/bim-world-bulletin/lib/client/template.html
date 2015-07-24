@@ -16,7 +16,7 @@
       <div class="col-sm-3">
         <button class="btn btn-default">Apply Filter</button>
         {{> autoformModals}}
-        {{#afModal class="btn btn-primary" collection="Bulletins" operation="insert" buttonContent="Add Bulletin" meteormethod="submitBulletin" title="Add Bulletin"}}Add Bulletin{{/afModal}}
+        {{#afModal class="btn btn-default" buttonClasses="btn-default" title="Add Bulletin" collection="Bulletins" operation="insert" buttonContent="Add Bulletin" type="method" meteormethod="submitBulletin"}}Add Bulletin{{/afModal}}
       </div>
       <div class="col-sm-3" style="display:none;">
         Sort by: <select name="" id="">
