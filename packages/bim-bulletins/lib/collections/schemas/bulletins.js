@@ -45,12 +45,34 @@ var bulletinFields = {
     }
   },
   createdAt: {
-    type: Date,
-    optional: true,
+		type: Date,
+		optional: true,
+		autoValue: function() {
+			if(this.isInsert) {
+				return new Date();
+			} else if(this.isUpsert) {
+				return {$setOnInsert: new Date()};
+			} else {
+				this.unset();
+			}
+		},
     autoform: {
       omit: true
     }
-  }
+	},
+	updatedAt: {
+		type: Date,
+		autoValue: function() {
+			if(this.isUpdate) {
+				return new Date();
+			}
+		},
+    autoform: {
+      omit: true
+    },
+		denyInsert: true,
+		optional: true
+	}
 };
 
 BulletinSchema = new SimpleSchema(bulletinFields);

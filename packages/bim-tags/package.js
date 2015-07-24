@@ -20,9 +20,8 @@ Package.onUse(function (api) {
   api.imply(packages);
 
   api.addFiles([
-    'lib/schema/tags.js',
-    'lib/tags.js',
-    'lib/methods/tags.js'
+    'lib/collection.js',
+    'lib/tags.js'
   ], ['client', 'server']);
 
   api.addFiles([

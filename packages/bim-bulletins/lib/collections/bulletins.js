@@ -9,9 +9,18 @@ Bulletins.allow({
 		return true;
 	},
 	remove: function(userId, doc) {
-		return true;
+//		if(doc && doc.userId=== userId) {
+			return true;
+//		}
+		
 	},
 	update: function(userId, doc) {
-		return true;
+//		if(doc && doc.userId=== userId) {
+			return true;
+//		}
 	}
+});
+
+Bulletins.after.insert(function(userId, bulletin) {
+	Mediator.publish('addTags', bulletin.tags, bulletin._id);
 });

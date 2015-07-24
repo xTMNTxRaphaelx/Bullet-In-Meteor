@@ -41,7 +41,7 @@ Package.onUse(function(api) {
     'matteodem:easy-search',
     'arkham:comments-ui',
     'voodoohop:masonrify',
-    'mizzao:bootboxjs'
+    'kevohagan:sweetalert'
   ];
   
   api.use(packages);

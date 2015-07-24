@@ -4,8 +4,9 @@
 AutoForm.hooks({
   submitPostForm: {
     onSuccess: function(operation, bulletin) {
-      Mediator.publish('addTags', bulletin);
-      Router.go('singlePost', bulletin);
+//      console.log('hali');
+//      Mediator.publish('addTags', bulletin.tags, bulletin._id); 
+//      Router.go('singlePost', bulletin);
     }
   }
 });

@@ -2,12 +2,15 @@
   <div class="worldBulletinContent">
     <div class="row">
       <div class="col-sm-9">
-        <p>Showing All Tags with Latest Sorting.</p>
         <div id="tagsCloud" class="well tags-cloud ">
           <h3>Tag Cloud</h3>
-          {{#each tags}}
-            {{> tag}}  
-          {{/each}}
+          {{#if tagsPresent}}
+            {{#each tags}}
+              {{> tag}}  
+            {{/each}}
+          {{else}}
+            Sorry.. No Tags present.
+          {{/if}}
         </div>    
       </div>
       <div class="col-sm-3">
@@ -25,20 +28,22 @@
     <div class="bulletinsContent row">
       <div class="col-sm-12 grid">
         <div class="row masonry-grid">
-          
-          {{#masonryContainer itemSelector=".grid-item" columnWidth=".grid-item" percentPosition=true transitionDuration="0.1s" gutter=0 id="MasonryContainer"}}
-            {{#each bulletins}}
-              {{#masonryElement "MasonryContainer"}}
-                {{> bulletin}}  
-              {{/masonryElement}}
-            {{/each}}
-          {{/masonryContainer}}
+          {{#if bulletinsPresent}}
+            {{#masonryContainer itemSelector=".grid-item" columnWidth=".grid-item" percentPosition=true transitionDuration="0.1s" gutter=0 id="MasonryContainer"}}
+              {{#each bulletins}}
+                {{#masonryElement "MasonryContainer"}}
+                  {{> bulletin}}  
+                {{/masonryElement}}
+              {{/each}}
+            {{/masonryContainer}}
+            <div class="js-loadMore text-center col-sm-12">
+              <button class="btn">+ Load More (fallback)</button>
+            </div>
+          {{else}}
+            <span class="text-center">Sorry.. No bulletin found.</span>
+          {{/if}}
         </div>
       </div>
-      
-      <div class="js-loadMore text-center col-sm-12">
-        <button class="btn">+ Load More (fallback)</button>
-      </div>  
     </div>  
   </div>
 </template>
