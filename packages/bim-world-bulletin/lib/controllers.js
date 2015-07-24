@@ -11,20 +11,9 @@ WorldBulletinController = RouteController.extend({
 	},
 
 	waitOn: function () {
-		return [Meteor.subscribe('allBulletins', this.findOptions()), Meteor.subscribe('allTags', this.findOptions()), Mediator.subscribe("tag_clicked")];
+		return [Meteor.subscribe('allBulletins', this.findOptions()), Meteor.subscribe('allTags', this.findOptions())];
 	},
 	data: function () {
 		return { bulletins: Bulletins.find({}, this.findOptions()), tags: Tags.find({}, this.findOptions()) };
 	}
-});
-
-
-Meteor.startup(function() {
-	return Deps.autorun(function() {
-		var args;
-		args= Mediator.subscribe("tag_clicked");
-		if(args) {
-			Meteor.call('tag_clicked', args[1]);
-		}
-	});
 });

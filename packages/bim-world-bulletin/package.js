@@ -20,15 +20,14 @@ Package.onUse(function(api) {
   api.imply(packages);
   
   api.addFiles([
-    'lib/methods.js',
-    'lib/controller.js'
+    'lib/world-bulletin.js',
+    'lib/controllers.js'
   ], ['client', 'server']);
   
   
   api.addFiles([
-    'lib/client/templates.html',
-    'lib/client/templates.js',
-    'lib/client/subscribe.js'
+    'lib/client/template.html',
+    'lib/client/template.js'
   ], 'client');
   
   api.export('WorldBulletinController');

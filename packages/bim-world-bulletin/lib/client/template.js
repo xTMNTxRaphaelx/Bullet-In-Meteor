@@ -63,3 +63,6 @@ Meteor.startup(function (argument) {
   $(window).scroll(loadMore);
 });
 
+Deps.autorun(function () {
+  Meteor.subscribe('allBulletins', Session.get('query'));
+});
