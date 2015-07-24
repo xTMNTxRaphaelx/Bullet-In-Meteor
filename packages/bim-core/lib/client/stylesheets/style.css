@@ -114,6 +114,15 @@ input:checked + label::before {
   transform: translateY(-5px) scale(1, 1);
 }
 
+.bulletin.off {
+  opacity: 0;
+}
+
+.bulletin {
+  opacity: 1;
+  transition: opacity 1000ms ease;
+}
+
 
 .bulletin-edit {
   position: absolute;
@@ -222,4 +231,3 @@ input:checked + label::before {
     padding-right:0 !important;
     padding-left:0 !important;
 }
-

@@ -1,3 +1,6 @@
+/* global Fake */
+/* global _ */
+/* global Factory */
 /* global Mediator */
 
 if(Meteor.isClient) {
@@ -61,3 +64,32 @@ Meteor.startup(function() {
 		}
 	});
 });
+
+
+//Fake data generator
+//if(Meteor.isServer) {
+//  Meteor.startup(function() {
+//    console.log(Fake.word());
+//    Factory.define('message', Bulletins, {
+//      title: function() {
+//          return Fake.word();
+//      },
+//      body: function() {
+//        return Fake.sentence() + '\n'+ Fake.paragraph();
+//      },
+//      tags: function() {
+//        return [Fake.word(), Fake.word(), Fake.word()];
+//      }
+//    });
+//  
+    // Add this if you want to remove all messages before seeding
+//    Bulletins.remove({});
+  
+  //  if (Bulletins.find({}).count() === 0) {
+//      _(10).times(function(n) {
+//        console.log('x');
+//        Factory.create('message');
+//      });
+  //  }
+//  });  
+//}

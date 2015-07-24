@@ -3,11 +3,13 @@
     <div class="bulletin" style="background-color:{{bulletinColor}}">
       <div class="bulletin-heading">
         <h4 class="bulletin-title">{{#linkTo route='singlePost'}}{{title}}{{/linkTo}}</h4>
+        {{dateWritten}}
         {{#afModal class='btn btn-primary' collection='Bulletins' operation='update' doc=_id}} Update {{/afModal}}
         {{#afModal class='btn btn-danger' collection='Bulletins' operation='remove' doc=_id}} Delete {{/afModal}}
         <i class="fa fa-edit bulletin-edit"></i><i class="fa fa-times bulletin-delete"></i>
       </div>
       <div class="bulletin-body">
+        
         {{#markdown}}{{body}}{{/markdown}}
         
       </div>

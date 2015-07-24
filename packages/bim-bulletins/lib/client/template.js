@@ -10,8 +10,11 @@ Template.bulletin.helpers({
 		return Tags.find({});
 	},
 	bulletinColor: function() {
-		var colors= ['lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgreen', 'lightpink'];
+		var colors= ['lightcyan', 'lightgoldenrodyellow', 'lightgreen', 'lightpink'];
 		return colors[Math.floor(Math.random()*colors.length)];
+	},
+	dateWritten: function() {
+		return moment(this.createdAt).fromNow();
 	}
 });
 

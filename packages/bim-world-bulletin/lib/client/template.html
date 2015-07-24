@@ -2,7 +2,7 @@
   <div class="worldBulletinContent">
     <div class="row">
       <div class="col-sm-9">
-        <div id="tagsCloud" class="well tags-cloud ">
+        <div id="tagsCloud" class="well tags-cloud text-center">
           <h3>Tag Cloud</h3>
           {{#if tagsPresent}}
             {{#each tags}}
@@ -27,7 +27,7 @@
     
     <div class="bulletinsContent row">
       <div class="col-sm-12 grid">
-        <div class="row masonry-grid">
+        <div class="row masonry-grid text-center">
           {{#if bulletinsPresent}}
             {{#masonryContainer itemSelector=".grid-item" columnWidth=".grid-item" percentPosition=true transitionDuration="0.1s" gutter=0 id="MasonryContainer"}}
               {{#each bulletins}}
@@ -40,7 +40,7 @@
               <button class="btn">+ Load More (fallback)</button>
             </div>
           {{else}}
-            <span class="text-center">Sorry.. No bulletin found.</span>
+            <span>Sorry.. No bulletin found.</span>
           {{/if}}
         </div>
       </div>

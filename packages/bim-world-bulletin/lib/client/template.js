@@ -1,3 +1,4 @@
+/* global Tracker */
 /* global Meteor */
 /* global $ */
 /* global Deps */
@@ -27,3 +28,22 @@ Template.worldBulletin.helpers({
     return Bulletins.find().count() > 0;
   }
 });
+
+Template.worldBulletin.rendered= function() {
+  return this.$('.masonry-grid')[0]._uihooks= {
+    insertElement: function(node, next) {
+      $(node).addClass('off').insertBefore(next);
+      return Tracker.autoFlush(function() {
+        return $(node).removeClass('off');
+      })
+    },
+    removeElement: function(node) {
+      var finishEvent;
+      finishEvent = 'webkitTransitionEnd oTransitionEnd transitionEnd msTransitionEnd transitionend';
+      $(node).addClass('off');
+      return $(node).on(finishEvent, function() {
+        return $(node).remove();
+      });
+    }
+  }
+}
