@@ -12,3 +12,14 @@ Template.bulletin.helpers({
 		return Tags.find({});
 	}
 });
+
+Template.bulletin.events({
+	'click i.bulletin-edit': function(event) {
+		event.preventDefault();
+		$(event.currentTarget).siblings('a.btn-primary').trigger('click');
+	},
+	'click i.bulletin-delete': function(event) {
+		event.preventDefault();
+		$(event.currentTarget).siblings('a.btn-danger').trigger('click');	
+	}
+});

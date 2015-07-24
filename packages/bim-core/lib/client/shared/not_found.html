@@ -1,4 +1,14 @@
 <template name="notFound">
-  <h1>Page not found</h1>
-  <p>Go back to our {{#linkTo route='root'}}main page{{/linkTo}}</p>
+  <div class="error-template">
+    <h1>Oops</h1>
+    <h2>404 Not Found</h2>
+    <div class="error-details">
+      Sorry, an error has occured. Requested page not found.
+    </div>
+    <div class="error-actions">
+      {{#linkTo route='root' class='btn btn-primary'}}
+        <span class="fa fa-home"></span>Take me Home
+      {{/linkTo}}
+    </div>
+  </div>
 </template>

@@ -7,6 +7,11 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #fff; 
+  background-image: 
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
 }
 
 /*Header*/
@@ -100,12 +105,41 @@ input:checked + label::before {
   transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
   transform: translateY(0) scale(0.95, 0.95);
+  position: relative;
 }
 
 .bulletin:hover {
   box-shadow: 0 11px 18px rgba(0,0,0,0.2);
   border: 1px solid #d9230f;
   transform: translateY(-5px) scale(1, 1);
+}
+
+
+.bulletin-edit {
+  position: absolute;
+  top:2px;
+  right: 20px;
+  height: 20px;
+  width: 20px;  
+}
+.bulletin-edit:hover {
+  color: #d9230f;
+}
+
+.bulletin-delete {
+  position: absolute;
+  top:1px;
+  right: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+.bulletin-delete:hover {
+  color: #d9230f;
+}
+
+.bulletin .btn {
+  display: none;
 }
 
 .bulletin-body {
@@ -115,6 +149,8 @@ input:checked + label::before {
 .bulletin-body img {
   width: 100%!important;
 }
+
+
 
 
 /*Footer*/
@@ -142,6 +178,11 @@ input:checked + label::before {
 .btn-toolbar {
   margin-left: 0;
 }
+
+/*Error 404 Page*/
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
 
 /*Utilites*/
 
