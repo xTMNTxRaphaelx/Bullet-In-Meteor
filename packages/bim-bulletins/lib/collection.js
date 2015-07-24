@@ -7,26 +7,35 @@ var bulletinFields = {
   body: { type: String, label: 'Description', autoform: { afFieldInput: { type: 'summernote', class: 'editor' } } },
   _id: { type: String, optional: true, autoform: { omit: true } },
   userId: { type: String, optional: true, autoform: { omit: true } },
-  author: { type: String, optional: true, autoform: { omit: true } },
-  tags: { type: [String], optional: true, autoform: { type: 'tags', afFieldInput: 'bootstrap-tags-input' } },
-  createdAt: { type: Date, optional: true, autoform: { omit: true }, 
-  		autoValue: function() {
-			if(this.isInsert) {
-				return new Date();
-			} else if(this.isUpsert) {
-				return {$setOnInsert: new Date()};
-			} else {
-				this.unset();
-			}
-		}
-	},
-	updatedAt: { type: Date, autoform: { omit: true }, denyInsert: true, optional: true,
-		autoValue: function() {
-			if(this.isUpdate) {
-				return new Date();
-			}
+  author: { type: String, optional: true, autoform: { omit: true } ,
+    autoValue: function() {
+		var user= Meteor.user();
+		if(user.profile && user.profile.name) {
+			return user.profile.name;
+		} else {
+			return 'Author';
 		}
 	}
+  },
+  tags: { type: [String], optional: true, autoform: { type: 'tags', afFieldInput: 'bootstrap-tags-input' } },
+  createdAt: { type: Date, optional: true, autoform: { omit: true }, 
+	autoValue: function() {
+		if(this.isInsert) {
+			return new Date();
+		} else if(this.isUpsert) {
+			return {$setOnInsert: new Date()};
+		} else {
+			this.unset();
+		}
+	}
+  },
+  updatedAt: { type: Date, autoform: { omit: true }, denyInsert: true, optional: true,
+	autoValue: function() {
+		if(this.isUpdate) {
+			return new Date();
+		}
+	}
+  }
 };
 
 BulletinSchema = new SimpleSchema(bulletinFields);

@@ -43,7 +43,8 @@ Package.onUse(function(api) {
     'voodoohop:masonrify',
     'kevohagan:sweetalert',
     'dburles:factory',
-    'anti:fake'
+    'anti:fake',
+    'fezvrasta:bootstrap-material-design'
   ];
   
   api.use(packages);

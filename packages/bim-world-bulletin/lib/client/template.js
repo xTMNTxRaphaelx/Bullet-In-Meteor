@@ -6,7 +6,7 @@
 /* global Template */
 Template.worldBulletin.events({
   'click .js-loadMore button': function () {
-    loadMore({ force: true });
+    BiM.loadMore({ force: true });
     
   },
   'click .btn.btn-primary': function(event) {

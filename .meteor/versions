@@ -27,6 +27,7 @@ ejson@1.0.6
 email@1.0.6
 facebook@1.2.0
 fastclick@1.0.3
+fezvrasta:bootstrap-material-design@0.2.1
 flamparski:moment-locales@0.0.3
 fortawesome:fontawesome@4.2.0_2
 geojson-utils@1.0.3

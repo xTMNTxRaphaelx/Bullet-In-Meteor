@@ -15,7 +15,7 @@ if(Meteor.isClient) {
     Session.set('query', query);
   }
   
-  function loadMore(opts) {
+  BiM.loadMore= function loadMore(opts) {
     var force = opts.force || false;
     var threshold, target = $('body');
     if (!target.length) return;
@@ -33,7 +33,7 @@ if(Meteor.isClient) {
   
   Meteor.startup(function (argument) {
     Session.setDefault('query', { filterTitle: undefined, page: 1 });
-    $(window).scroll(loadMore);
+    $(window).scroll(BiM.loadMore);
   });  
 }
 
@@ -50,8 +50,10 @@ Meteor.methods({
         });
         var obj= {$or: arr};
         Session.set('query', {filterTitle: obj, page: 1});  
+      } else if(tagsSelected.length=== 1) {
+        Session.set('query', {filterTitle: {tags: tagsSelected[0]}, page: 1});
       } else {
-        Session.set('query', {filterTitle: {tags: name}, page: 1});  
+        Session.set('query', {page: 1});  
       }
     }
 	}

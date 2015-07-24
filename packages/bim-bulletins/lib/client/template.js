@@ -15,6 +15,15 @@ Template.bulletin.helpers({
 	},
 	dateWritten: function() {
 		return moment(this.createdAt).fromNow();
+	},
+	isCreator: function() {
+		var user= Meteor.user();
+		console.log(this);
+		if(!user) {
+			return false;
+		} else {
+			return user._id=== this.userId;	
+		}
 	}
 });
 
