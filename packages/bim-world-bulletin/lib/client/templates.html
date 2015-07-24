@@ -1,8 +1,9 @@
 <template name="worldBulletin">
   <div class="worldBulletinContent">
-    <div class="row" style="display:none;">
+    <div class="row">
       <div class="col-sm-9">
-        <div class="well tags-cloud ">
+        <p>Showing All Tags with Latest Sorting.</p>
+        <div id="tagsCloud" class="well tags-cloud " style="display:none;">
           <h3>Tag Cloud</h3>
           {{#each tags}}
             {{> tag}}  
@@ -10,6 +11,11 @@
         </div>    
       </div>
       <div class="col-sm-3">
+        <button class="btn btn-default">Apply Filter</button>
+        {{> autoformModals}}
+        {{#afModal class="btn btn-primary" collection="Bulletins" operation="insert" buttonContent="Add Bulletin" meteormethod="submitBulletin"}}Add Bulletin{{/afModal}}
+      </div>
+      <div class="col-sm-3" style="display:none;">
         Sort by: <select name="" id="">
           <option value="">Latest</option>
         </select>

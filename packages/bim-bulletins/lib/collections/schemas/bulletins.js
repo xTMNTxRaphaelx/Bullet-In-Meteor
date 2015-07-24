@@ -11,19 +11,7 @@ var bulletinFields = {
     autoform: {
       afFieldInput: {
         type: 'summernote',
-        class: 'editor',
-        settings: {
-          toolbar: [
-            //[groupname, [button list]]
-             
-            ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['font', ['strikethrough', 'superscript', 'subscript']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-          ]
-        }
+        class: 'editor'
       }
     }
   },

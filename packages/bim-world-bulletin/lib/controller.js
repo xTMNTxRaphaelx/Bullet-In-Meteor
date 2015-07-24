@@ -11,7 +11,7 @@ WorldBulletinController = RouteController.extend({
 	},
 
 	waitOn: function () {
-		return [Meteor.subscribe('allBulletins'), Meteor.subscribe('allTags')];
+		return [Meteor.subscribe('allBulletins', this.findOptions()), Meteor.subscribe('allTags', this.findOptions()), Mediator.subscribe("tag_clicked")];
 	},
 	data: function () {
 		return { bulletins: Bulletins.find({}, this.findOptions()), tags: Tags.find({}, this.findOptions()) };

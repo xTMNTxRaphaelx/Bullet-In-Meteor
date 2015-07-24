@@ -1,3 +1,4 @@
+/* global Meteor */
 /* global $ */
 /* global Deps */
 /* global Session */
@@ -42,12 +43,14 @@ function loadMore(opts) {
   var threshold, target = $('body');
   if (!target.length) return;
 
-  threshold = $(window).scrollTop() + $(window).height() - target.height();
+
+  // -60 is for margin bottom given for footer.
+  threshold = $(window).scrollTop() + $(window).height() - target.height() - 60;
 
   // HACK: see http://www.meteorpedia.com/read/Infinite_Scrolling
   if (force || target.offset().top < threshold + 1 && threshold < 2) {
     var query = Session.get('query');
-    Session.set('query', { filterTitle: query.filterTitle, page: query.page + 1 })
+    Session.set('query', { filterTitle: query.filterTitle, page: query.page + 1 });
   }
 }
 

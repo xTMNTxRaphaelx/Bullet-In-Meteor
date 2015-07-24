@@ -40,8 +40,8 @@ Package.onUse(function(api) {
 //    'okgrow:iron-router-autoscroll',
     'matteodem:easy-search',
     'arkham:comments-ui',
-    'voodoohop:masonrify'
-//    'sjors:meteor-masonry'
+    'voodoohop:masonrify',
+    'mizzao:bootboxjs'
   ];
   
   api.use(packages);

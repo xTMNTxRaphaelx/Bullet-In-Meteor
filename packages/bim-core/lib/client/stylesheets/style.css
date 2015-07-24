@@ -1,11 +1,19 @@
 /*Custom app css goes here*/
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
 
 /*Header*/
 .headerContent {
   text-align: center;
   margin: 0 auto;
-  border-bottom: 2px solid #dd4814;
+  border-bottom: 2px solid #d9230f;
 }
 
 .navbar {
@@ -104,12 +112,35 @@ input:checked + label::before {
   padding: 15px;
 }
 
+.bulletin-body img {
+  width: 100%!important;
+}
+
 
 /*Footer*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
 .footerContent {
-  border-top: 2px solid #dd4814;
+  border-top: 2px solid #d9230f;
   text-align: center;
   margin: 0 auto;
+/*  padding: 10px;*/
+}
+
+/*Summernote editor*/
+.note-style, .note-height, .note-table, .note-view, .note-help {
+  display: none;
+}
+
+.btn-toolbar {
+  margin-left: 0;
 }
 
 /*Utilites*/
