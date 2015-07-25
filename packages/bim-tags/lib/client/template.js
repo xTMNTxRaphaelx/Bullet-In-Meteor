@@ -1,3 +1,4 @@
+/* global Template */
 /* global Mediator */
 /* global _ */
 Template.tag.events({

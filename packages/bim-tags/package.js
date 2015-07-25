@@ -35,9 +35,3 @@ Package.onUse(function (api) {
 
   api.export('Tags');
 });
-
-Package.onTest(function (api) {
-  api.use('tinytest');
-  api.use('rahulgarg:bim-tags');
-  api.addFiles('bim-tags-tests.js');
-});

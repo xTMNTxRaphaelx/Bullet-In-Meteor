@@ -1,3 +1,4 @@
+/* global Tags */
 /* global Tracker */
 /* global _ */
 /* global Mediator */

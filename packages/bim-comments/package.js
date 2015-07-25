@@ -1,3 +1,4 @@
+/* global Package */
 Package.describe({
   name: 'rahulgarg:bim-comments',
   version: '0.0.1',
@@ -18,13 +19,6 @@ Package.onUse(function(api) {
   api.imply(packages);
   
   api.addFiles([
-//    'lib/client/template.html',
     'lib/client/template.js'
   ], 'client');
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('rahulgarg:bim-comments');
-  api.addFiles('bim-comments-tests.js');
 });
