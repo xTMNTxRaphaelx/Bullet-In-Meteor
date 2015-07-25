@@ -254,3 +254,12 @@ input:checked + label::before {
 	z-index: 100;	
 	opacity: 1;
 }
+
+a.navbar-brand {
+  min-width: 400px;
+}
+img.logo {
+  width: 65px;
+  height: auto;
+  float: left;
+}
