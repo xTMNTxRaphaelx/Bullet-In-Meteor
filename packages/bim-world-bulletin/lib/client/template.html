@@ -1,9 +1,9 @@
 <template name="worldBulletin">
   <div class="worldBulletinContent">
     <div class="row">
-      <div class="col-sm-9">
-        <div id="tagsCloud" class="well tags-cloud text-center">
-          <h3>Tag Cloud</h3>
+      <div class="col-sm-12">
+        <div id="tagsCloud" class="tags-cloud text-left">
+          <h3>{{currentSearching}}</h3>
           {{#if tagsPresent}}
             {{#each tags}}
               {{> tag}}  
@@ -13,7 +13,7 @@
           {{/if}}
         </div>    
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3" style="display: none;">
         <button class="btn btn-default">Apply Filter</button>
         {{> autoformModals}}
         {{#afModal class="btn btn-default" buttonClasses="btn-default" title="Add Bulletin" collection="Bulletins" operation="insert" buttonContent="Add Bulletin" type="method" meteormethod="submitBulletin"}}Add Bulletin{{/afModal}}

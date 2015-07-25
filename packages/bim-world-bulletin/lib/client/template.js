@@ -1,3 +1,6 @@
+/* global BiM */
+/* global sweetAlert */
+/* global Tags */
 /* global Tracker */
 /* global Meteor */
 /* global $ */
@@ -26,6 +29,28 @@ Template.worldBulletin.helpers({
   },
   bulletinsPresent: function() {
     return Bulletins.find().count() > 0;
+  },
+  currentSearching: function() {
+    return Tracker.nonreactive(function() {
+      
+      //no search here
+      if(!Session.get('query').filterTitle && Session.get('query').tags=== 'no_tags') {
+        return 'Nothing selected. Showing all results.';
+      }
+      
+      //single or multiple tags selected here
+      if(Session.get('query').filterTitle) {
+        //single search here
+        if(Session.get('query').filterTitle.tags) {
+          return 'Selected: '+ Session.get('query').filterTitle.tags;
+        }
+        //multiple heres  
+        return 'Selected multiple';
+      }
+      //First Time
+      return 'Tag Cloud';  
+    });
+    
   }
 });
 

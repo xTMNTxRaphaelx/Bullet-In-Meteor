@@ -53,7 +53,7 @@ Meteor.methods({
       } else if(tagsSelected.length=== 1) {
         Session.set('query', {filterTitle: {tags: tagsSelected[0]}, page: 1});
       } else {
-        Session.set('query', {page: 1});  
+        Session.set('query', {page: 1, tags: 'no_tags'});  
       }
     }
 	}

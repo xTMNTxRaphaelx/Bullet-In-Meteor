@@ -1,3 +1,8 @@
+/* global Tracker */
+/* global SimpleSchema */
+/* global Meteor */
+/* global Mongo */
+/* global Mediator */
 /* global BulletinSchema */
 /* global Bulletins */
 Bulletins = new Mongo.Collection('bulletins');
@@ -68,5 +73,10 @@ Bulletins.after.insert(function(userId, bulletin) {
 
 Bulletins.after.update(function(userId, bulletin, fieldNames, modifier, options) {
 	//Call to update tags
-	Mediator.publish('update_tags', this.previous.tags, bulletin.tags);
+	Mediator.publish('update_tags', this.previous.tags, bulletin.tags, bulletin._id);
+});
+
+Bulletins.after.remove(function(userId, bulletin) {
+	//call to delete tags
+	Mediator.publish('delete_tags', bulletin.tags);
 });

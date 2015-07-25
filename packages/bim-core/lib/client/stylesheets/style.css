@@ -53,10 +53,10 @@ a.brand {
 
 .tags-cloud label {
   color: #000;
-background-color: #fff;
+/*background-color: #fff;
 border: 1px solid rgba(0,0,0,.25);
 border-radius: 3px;
-padding: .5rem .75rem;
+padding: .5rem .75rem;*/
 transition: all .2s linear;
 font-size: 1.2rem;
   display: inline-block;
@@ -71,6 +71,7 @@ font-size: 1.2rem;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
+  border-bottom: 1px solid black;
 }
 
 .tags-cloud label::before {
@@ -80,13 +81,14 @@ font-size: 1.2rem;
 }
 
 input:checked + label {
-    color: #fff;
-  border: 1px solid rgba(255,255,255,.25);
-  background-color: #d9230f;
+    color: #d9230f;
+    border-bottom: 1px solid #d9230f;
+/*  border: 1px solid rgba(255,255,255,.25);*/
+/*  background-color: #d9230f;*/
 }
 
 input:checked + label::before {
-  background-color: #d9230f;
+/*  background-color: #d9230f;*/
 }
 
 /*Bulletins*/
