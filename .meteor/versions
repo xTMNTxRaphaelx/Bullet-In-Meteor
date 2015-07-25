@@ -83,6 +83,7 @@ rahulgarg:bim-comments@0.0.1
 rahulgarg:bim-core@0.0.1
 rahulgarg:bim-lib@0.0.1
 rahulgarg:bim-tags@0.0.1
+rahulgarg:bim-transitions@0.0.1
 rahulgarg:bim-world-bulletin@0.0.1
 raix:handlebar-helpers@0.1.4
 random@1.0.3
@@ -101,6 +102,7 @@ spacebars-compiler@1.0.6
 spiderable@1.0.7
 srp@1.0.3
 standard-app-packages@1.0.5
+stylus@1.0.7
 summernote:summernote@0.5.10
 templating@1.1.1
 tracker@1.0.7

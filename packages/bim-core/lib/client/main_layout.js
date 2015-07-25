@@ -7,4 +7,3 @@ Template.mainLayout.helpers({
       return currentRoute && template === currentRoute.lookupTemplate() ? 'active' : '';
     }
  });
- 

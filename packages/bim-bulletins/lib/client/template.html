@@ -20,18 +20,20 @@
 </template>
 
 <template name="bulletinPage">
-  <div class="row bulletinPageRow">
-    <div class="col-sm-7 text-center bulletin">
-      <h2>{{title}}</h2>
-      <p>{{#markdown}}{{body}}{{/markdown}}</p>
-      <p>by {{author}}</p>
-    </div>
-    <div class="col-sm-5">
-<!--      {{> shareit}}-->
-      {{> favoriteButton _id=_id}}
-      <div class="comment-section commentsContainer">
-        {{> commentsBox id=_id}}
-      </div>    
+  <div>
+    <div class="row bulletinPageRow">
+      <div class="col-sm-7 text-center bulletin">
+        <h2>{{title}}</h2>
+        <p>{{#markdown}}{{body}}{{/markdown}}</p>
+        <p>by {{author}}</p>
+      </div>
+      <div class="col-sm-5">
+  <!--      {{> shareit}}-->
+        {{> favoriteButton _id=_id}}
+        <div class="comment-section commentsContainer">
+          {{> commentsBox id=_id}}
+        </div>    
+      </div>
     </div>
   </div>
 </template>

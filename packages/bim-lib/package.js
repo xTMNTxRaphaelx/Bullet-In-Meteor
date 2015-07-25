@@ -19,6 +19,7 @@ Package.onUse(function(api) {
     'accounts-facebook',
     'reactive-var',
     'spiderable',
+    'stylus',
     'email',
     'iron:router',
     'twbs:bootstrap',

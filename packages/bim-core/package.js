@@ -13,7 +13,7 @@ Package.onUse(function (api) {
 
   var packages = [
     'rahulgarg:bim-lib', //no dependencies,
-    'rahulgarg:bim-world-bulletin' // World Bulletin Page 
+    'rahulgarg:bim-world-bulletin' // World Bulletin Page
   ];
 
   api.use(packages);
