@@ -18,6 +18,7 @@ Package.onUse(function(api) {
     'accounts-password',
     'accounts-facebook',
     'reactive-var',
+    'spiderable',
     'email',
     'iron:router',
     'twbs:bootstrap',
@@ -44,7 +45,9 @@ Package.onUse(function(api) {
     'kevohagan:sweetalert',
     'dburles:factory',
     'anti:fake',
-    'fezvrasta:bootstrap-material-design'
+    'fezvrasta:bootstrap-material-design',
+    'arkham:comments-ui',
+    'joshowens:shareit'
   ];
   
   api.use(packages);

@@ -10,7 +10,8 @@ Package.onUse(function(api) {
   api.versionsFrom("METEOR@1.0");
 
   var packages = [
-    'rahulgarg:bim-lib' //no dependencies
+    'rahulgarg:bim-lib', //no dependencies
+    'rahulgarg:bim-comments'
   ];
   
   api.use(packages);

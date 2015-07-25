@@ -19,9 +19,19 @@
 </template>
 
 <template name="bulletinPage">
-  <h2>{{title}}</h2>
-  <p>{{#markdown}}{{body}}{{/markdown}}</p>
-  <p>by {{author}}</p>
+  <div class="row bulletinPageRow">
+    <div class="col-sm-7 text-center bulletin">
+      <h2>{{title}}</h2>
+      <p>{{#markdown}}{{body}}{{/markdown}}</p>
+      <p>by {{author}}</p>
+    </div>
+    <div class="col-sm-5">
+      {{>shareit}}
+      <div class="comment-section commentsContainer">
+        {{> commentsBox id=_id}}
+      </div>    
+    </div>
+  </div>
 </template>
 
 <template name="newBulletin">
