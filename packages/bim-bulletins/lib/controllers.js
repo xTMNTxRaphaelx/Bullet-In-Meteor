@@ -5,7 +5,7 @@ SingleBulletinController = RouteController.extend({
   template: 'bulletinPage',
   
   waitOn: function(){
-    return Meteor.subscribe('singleBulletin', this.params._id);
+    return [Meteor.subscribe('singleBulletin', this.params._id)];
   },
 
   data: function() {

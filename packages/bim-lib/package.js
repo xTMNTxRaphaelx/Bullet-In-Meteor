@@ -47,7 +47,8 @@ Package.onUse(function(api) {
     'anti:fake',
     'fezvrasta:bootstrap-material-design',
     'arkham:comments-ui',
-    'joshowens:shareit'
+    'joshowens:shareit',
+    'yogiben:favorites'
   ];
   
   api.use(packages);

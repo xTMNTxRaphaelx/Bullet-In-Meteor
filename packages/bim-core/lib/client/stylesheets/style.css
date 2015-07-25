@@ -155,6 +155,12 @@ input:checked + label::before {
   display: none;
 }
 
+.bulletin .btn.favorite-button {
+  display: block;
+  width: 50%;
+  margin: 15px auto;
+}
+
 .bulletin-body {
   padding: 15px;
 }
@@ -223,7 +229,7 @@ input:checked + label::before {
 /*Item blur effect*/
 .bulletin{
 	cursor: pointer;
-	margin: 15px;
+/*	margin: 15px;*/
   border: 5px solid white;
 	box-shadow: 
 		0px 0px 0px 6px rgba(255,255,255,1), 

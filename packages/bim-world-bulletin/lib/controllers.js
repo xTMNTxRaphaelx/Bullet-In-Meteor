@@ -11,7 +11,7 @@ WorldBulletinController = RouteController.extend({
 	},
 
 	waitOn: function () {
-		return [Meteor.subscribe('allBulletins', this.findOptions()), Meteor.subscribe('allTags', this.findOptions())];
+		return [Meteor.subscribe('allBulletins', this.findOptions()), Meteor.subscribe('allTags', this.findOptions()), Meteor.subscribe('favorites')];
 	},
 	data: function () {
 		var query= Session.get('query');

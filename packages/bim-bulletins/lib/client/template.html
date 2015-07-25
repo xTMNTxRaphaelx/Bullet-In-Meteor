@@ -14,6 +14,7 @@
         {{#markdown}}{{body}}{{/markdown}}
       </div>
       <p><b>Tags: </b>{{tags}}</p>
+      {{> favoriteButton _id=_id}}
     </div>
   </div>
 </template>
@@ -26,7 +27,8 @@
       <p>by {{author}}</p>
     </div>
     <div class="col-sm-5">
-      {{>shareit}}
+<!--      {{> shareit}}-->
+      {{> favoriteButton _id=_id}}
       <div class="comment-section commentsContainer">
         {{> commentsBox id=_id}}
       </div>    
