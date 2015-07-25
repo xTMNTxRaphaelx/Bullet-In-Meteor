@@ -24,3 +24,9 @@ b. Create all your modules, making sure to include the `app-lib` dependency firs
 
 c. Last, you have `app-core` which usually has your startup code, layout, css, main router, global helpers, and configs. This should `api.use` all of your modules from the 2nd layer, with `app-lib` first.  Also add `api.imply` which makes all other packages available in your app. This creates the 3rd layer which should ideally define the application of your modules. Your app only needs to depend on `app-core` to be fully functional, leaving you with a cleanly separated application.
 
+
+
+
+ISSUES:-
+
+1. While updating Bulletin, and pressing x in update modal window. Next time while updating another bulletin, summernote and bootstrap tags hold earlier value. Only works when update button is clicked.

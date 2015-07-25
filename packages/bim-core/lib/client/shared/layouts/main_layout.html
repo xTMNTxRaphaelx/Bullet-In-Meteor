@@ -1,5 +1,5 @@
 <template name="mainLayout">
-  
+  {{> autoformModals}}
   <div class="headerContent">
     <nav class="navbar navbar-fixed">
       <div class="container">
@@ -14,7 +14,6 @@
             <span class="githubLinkText"><a href="https://github.com/xTMNTxRaphaelx/Bullet-In-Meteor"><i class="fa fa-github"></i>Github Link</a></span>
           </li>
           <li>
-            {{> autoformModals}}
             {{#afModal class="btn btn-default" buttonClasses="btn-default" title="Add Bulletin" collection="Bulletins" operation="insert" buttonContent="Add a Bulletin"}}Add a Bulletin{{/afModal}}
           </li>
           <li>

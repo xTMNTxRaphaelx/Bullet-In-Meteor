@@ -33,5 +33,5 @@ Package.onUse(function(api) {
     'lib/client/template.js'
   ], 'client');
   
-  api.export(['Bulletins', 'NewBulletinController', 'SingleBulletinController'])
+  api.export(['Bulletins', 'SingleBulletinController'])
 });

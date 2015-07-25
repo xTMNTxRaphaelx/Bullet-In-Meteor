@@ -1,3 +1,4 @@
+/* global Router */
 /* global Template */
 /* global Transitioner */
 Template.mainLayout.helpers({

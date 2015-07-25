@@ -16,13 +16,6 @@ Router.route('/', {
   title: 'BiM- World Bulletin'
 });
 
-Router.route('/new', {
-  name: 'newPost',
-  controller: NewBulletinController,
-  fastRender: true,
-  title: 'BiM- New Bulletin'
-});
-
 Router.route('/:_id', {
   name: 'singlePost',
   controller: SingleBulletinController,
