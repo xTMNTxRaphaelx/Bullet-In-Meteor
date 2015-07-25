@@ -38,6 +38,13 @@ Template.bulletin.events({
 	'click i.bulletin-delete': function(event) {
 		event.preventDefault();
 		$(event.currentTarget).siblings('a.btn-danger').trigger('click');	
+	},
+	'mouseover .bulletin': function(event) {
+		$('.bulletin').addClass('blur');
+		$(event.currentTarget).removeClass('blur').addClass('active');
+	},
+	'mouseout .bulletin': function(event) {
+		$('.bulletin').removeClass('blur').removeClass('active');
 	}
 });
 

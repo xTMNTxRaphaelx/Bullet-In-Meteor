@@ -217,3 +217,32 @@ input:checked + label::before {
 .btn:not(.btn-link):not(.btn-flat), .btn-default:not(.btn-link):not(.btn-flat) {
   color: black!important;
 }
+
+/*Item blur effect*/
+.bulletin{
+	cursor: pointer;
+	margin: 15px;
+  border: 5px solid white;
+	box-shadow: 
+		0px 0px 0px 6px rgba(255,255,255,1), 
+		1px 1px 3px 6px rgba(0,0,0,0.2);
+  transition: 
+  	opacity 0.4s linear, 
+  	transform 0.4s ease-in-out, 
+  	box-shadow 0.4s ease-in-out;
+}
+
+.bulletin.blur{
+	box-shadow: 0px 0px 20px 10px rgba(255,255,255,1);
+	transform: scale(0.9);
+	opacity: 0.7;
+}
+
+.bulletin.active{
+	transform: scale(1.05);
+	box-shadow: 
+		0px 0px 0px 10px rgba(255,255,255,1), 
+		1px 11px 15px 10px rgba(0,0,0,0.4);
+	z-index: 100;	
+	opacity: 1;
+}
