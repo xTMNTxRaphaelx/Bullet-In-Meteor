@@ -18,7 +18,6 @@ Package.onUse(function(api) {
   api.imply(packages);
   
   api.addFiles([
-    'lib/client/transitions.styl',
-    'lib/client/transitions.js'
+    
   ], 'client');
 });

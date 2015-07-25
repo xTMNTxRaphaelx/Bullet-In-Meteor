@@ -85,3 +85,9 @@ Template.worldBulletin.rendered = function() {
     return results;
   });
 };
+
+Template.worldBulletin.transition= function() {
+  return function(from, to, element) {
+    return 'fade';   
+  };
+};

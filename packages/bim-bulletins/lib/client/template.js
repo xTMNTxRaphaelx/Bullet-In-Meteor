@@ -48,12 +48,8 @@ Template.bulletin.events({
 	}
 });
 
-//AutoForm.hooks({
-//  submitPostForm: {
-//    onSuccess: function(operation, bulletin) {
-////      console.log('hali');
-////      Mediator.publish('addTags', bulletin.tags, bulletin._id); 
-////      Router.go('singlePost', bulletin);
-//    }
-//  }
-//});
+Template.bulletinPage.transition= function() {
+  return function(from, to, element) {
+    return 'fade';   
+  };
+};

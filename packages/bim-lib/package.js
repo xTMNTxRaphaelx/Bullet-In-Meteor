@@ -49,7 +49,9 @@ Package.onUse(function(api) {
     'fezvrasta:bootstrap-material-design',
     'arkham:comments-ui',
     'joshowens:shareit',
-    'yogiben:favorites'
+    'yogiben:favorites',
+    'percolate:momentum',
+    'percolate:momentum-iron-router'
   ];
   
   api.use(packages);

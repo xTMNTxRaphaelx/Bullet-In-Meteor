@@ -27,7 +27,9 @@
   <div class="mainContent container">
     <div class="row">
       <div class="col-sm-12">
-        {{> yield}}
+        {{#momentum plugin='iron-router' options=transition}}
+          {{> yield}}
+        {{/momentum}}
       </div>
     </div>
   </div>
