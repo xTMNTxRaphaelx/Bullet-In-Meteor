@@ -7,9 +7,6 @@ Assignment given for Job interview.
 
 
 
-
-
-
 Using an all-packages approach.
 
 a. `app-lib` package accomplishes the following:
@@ -26,7 +23,14 @@ c. Last, you have `app-core` which usually has your startup code, layout, css, m
 
 
 
-
 ISSUES:-
-
 1. While updating Bulletin, and pressing x in update modal window. Next time while updating another bulletin, summernote and bootstrap tags hold earlier value. Only works when update button is clicked.
+
+
+
+Todos: -
+1. Different sizes bulletin and color customization.
+2. Add public/private.
+3. Add email reminders.
+4. Export to PDF/ JPG
+5. Sharing.
